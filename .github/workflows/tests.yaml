@@ -15,9 +15,9 @@ jobs:
           cache: 'pip'
       - name: Install streamlit
         run: pip install streamlit
-      - name: Install protobuf
-        run: pip install protobuf==3.19.4
       - name: Install tensorflow
         run: pip install tensorflow
+      - name: Install protobuf
+        run: pip install protobuf==3.19.4
       - name: Test with tests
         run: python3 -m tests
