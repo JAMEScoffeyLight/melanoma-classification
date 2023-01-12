@@ -17,6 +17,9 @@ def test_model_frog():
         'tree_frog': 0.025292609,
         'bullfrog': 0.010989578
     }
+
+    for cl in classes:
+        print(cl[2], cl[1])
     
     for cl in classes:
         assert isclose(cl[2], frogs[cl[1]])
@@ -35,6 +38,9 @@ def test_model_car():
         'racer': 0.12519251,
         'convertible': 0.023086574
     }
+
+    for cl in classes:
+        print(cl[2], cl[1])
     
     for cl in classes:
         assert isclose(cl[2], cars[cl[1]])
