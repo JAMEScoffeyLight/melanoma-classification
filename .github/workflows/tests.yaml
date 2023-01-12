@@ -13,6 +13,8 @@ jobs:
           python-version: '3.7'
           architecture: 'x64'
           cache: 'pip'
+      - name: install protobuf
+        run: wget https://raw.githubusercontent.com/protocolbuffers/protobuf/main/python/google/protobuf/internal/builder.py -O /opt/hostedtoolcache/Python/3.7.15/x64/lib/python3.8/site-packages/google/protobuf/internal/builder.py
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Test with tests
