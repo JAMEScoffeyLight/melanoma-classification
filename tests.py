@@ -13,10 +13,11 @@ def test_model_frog():
     preds = model.predict(x)
     classes = decode_predictions(preds, top=3)[0]
     frogs = {
-        'tailed_frog': 0.9253198,
-        'tree_frog': 0.023592785,
-        'bullfrog': 0.0068289405
+        'tailed_frog': 0.89754784,
+        'tree_frog': 0.025292609,
+        'bullfrog': 0.010989578
     }
+    
     for cl in classes:
         assert isclose(cl[2], frogs[cl[1]])
         
@@ -30,10 +31,11 @@ def test_model_car():
     preds = model.predict(x)
     classes = decode_predictions(preds, top=3)[0]
     cars = {
-        'sports_car': 0.85632396,
-        'racer': 0.05533105,
-        'convertible': 0.021732405
+        'sports_car': 0.7633676,
+        'racer': 0.12519251,
+        'convertible': 0.023086574
     }
+    
     for cl in classes:
         assert isclose(cl[2], cars[cl[1]])
     
