@@ -1,7 +1,7 @@
 from PIL import Image
 from tensorflow.keras.applications import EfficientNetB0
 from tensorflow.keras.applications.efficientnet import decode_predictions
-from melanoma_classification import preprocess_image
+from main import preprocess_image
 
 def test_model_frog():
     img = Image.open("frog.jpg")
