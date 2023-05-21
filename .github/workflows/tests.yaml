@@ -15,8 +15,8 @@ jobs:
           cache: 'pip'
       - name: Install streamlit
         run: pip install streamlit
-      - name: Install fastai
-        run: pip install fastai
+      - name: Install fastbook
+        run: pip install fastbook
       - name: Install tensorflow
         run: pip install tensorflow==2.8.0
       - name: Test with tests
