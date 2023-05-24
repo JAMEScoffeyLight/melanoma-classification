@@ -11,7 +11,7 @@ from tensorflow.keras.applications.efficientnet import preprocess_input, decode_
 import pathlib
 
 temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.PurePath
+#pathlib.PosixPath = pathlib.PurePath
 
 
 @st.cache(allow_output_mutation=True)
