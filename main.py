@@ -36,9 +36,9 @@ def load_image():
         # Генерируем уникальный идентификатор для названия файла
         filename = str(uuid.uuid4()) + '.png'
         # Сохраняем изображение в папку input с уникальным именем
-        if not os.path.exists('input\\siic-isic-224x224-images'):
-            os.mkdir('input\\siic-isic-224x224-images')
-        img.save('input\\siic-isic-224x224-images\\' + filename)
+        if not os.path.exists(pathlib.Path(pathlib.Path.cwd(), 'input', 'siic-isic-224x224-images')):
+            os.mkdir(pathlib.Path(pathlib.Path.cwd(), 'input', 'siic-isic-224x224-images'))
+        img.save(pathlib.Path(pathlib.Path.cwd(), 'input', 'siic-isic-224x224-images', filename))
         return img, filename
     else:
         return None, None
