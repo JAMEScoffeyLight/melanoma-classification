@@ -37,7 +37,7 @@ def load_image():
         filename = str(uuid.uuid4()) + '.png'
         # Сохраняем изображение в папку input с уникальным именем
         if not os.path.exists(pathlib.Path(pathlib.Path.cwd(), 'input', 'siic-isic-224x224-images')):
-            os.mkdir(pathlib.Path(pathlib.Path.cwd(), 'input', 'siic-isic-224x224-images'))
+            os.makedirs(pathlib.Path(pathlib.Path.cwd(), 'input', 'siic-isic-224x224-images'))
         img.save(pathlib.Path(pathlib.Path.cwd(), 'input', 'siic-isic-224x224-images', filename))
         return img, filename
     else:
@@ -57,7 +57,6 @@ if result:
     x = preprocess_image(img[0])
     # Распознавание изображения
     filePath = os.path.abspath(pathlib.Path(pathlib.Path.cwd(), 'input', 'siic-isic-224x224-images', img[1]))
-    st.write('Path: ', filePath)
     weighPath = os.path.abspath('melanoma_detector_fold5.pkl')
     
     # Выводим заголовок результатов распознавания жирным шрифтом
