@@ -10,8 +10,8 @@ from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.efficientnet import preprocess_input, decode_predictions
 import pathlib
 
-temp = pathlib.PosixPath
-#pathlib.PosixPath = pathlib.PurePath
+#temp = pathlib.PosixPath
+#pathlib.PosixPath = pathlib.WindowsPath
 
 
 @st.cache(allow_output_mutation=True)
@@ -56,7 +56,8 @@ if result:
     # Предварительная обработка изображения
     x = preprocess_image(img[0])
     # Распознавание изображения
-    filePath = os.path.abspath('input\\siic-isic-224x224-images\\' + img[1])
+    filePath = os.path.abspath(pathlib.Path(pathlib.Path.cwd(), 'input', 'siic-isic-224x224-images', img[1]))
+    st.write('Path: ', filePath)
     weighPath = os.path.abspath('melanoma_detector_fold5.pkl')
     
     # Выводим заголовок результатов распознавания жирным шрифтом
