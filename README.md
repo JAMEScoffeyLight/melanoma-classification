@@ -1,4 +1,4 @@
-# melanoma-classification = Распознавание меланомы
+# melanoma-classification - Распознавание меланомы
 Project for skin cancer diagnosis for educational purposes on a cloud platform
 Проект для диагностирования рака кожи в учебных целях на облачной платформе
 
