@@ -17,3 +17,7 @@ Project for skin cancer diagnosis for educational purposes on a cloud platform
 Моравец Владислав - работа с данными, их разметка; написание отчёта (-)
 
 Кривошлык Александр - ведение проекта на Гитхабе, коммуникация с науч. руководителем (-)
+
+___
+
+![Демонстрация рабочего экрана](https://github.com/JAMEScoffeyLight/melanoma-classification/raw/main/testResult.png)
